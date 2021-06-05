@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<templates>
+  <template type="email" title="loginnotification_user_login" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<mail:subject>{{ phrase('loginnotification_login_from_new_ip', {'board': $xf.options.boardTitle}) }}</mail:subject>
+
+{{ phrase('loginnotification_login_from_new_ip_email_html', {
+	'username': $user.username,
+	'board': '<a href="' . link('canonical:index') . '">' . $xf.options.boardTitle . '</a>',
+	'security': '<a href="' . link('canonical:account/security') . '">' . phrase('password_and_security') . '</a>',
+	'ip': $ip,
+	'agent': $userAgent
+}) }}]]></template>
+  <template type="public" title="loginnotification_account_security_crumb" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:formrow rowtype="button"
+					label="{{ phrase('loginnotification_notifications') }}">
+
+					<xf:if is="$xf.visitor.Option.loginnotification_notification">
+						{{ phrase('loginnotification_notifications_enabled') }}
+					<xf:else />
+						{{ phrase('loginnotification_notifications_disabled') }}
+					</xf:if>
+					<xf:button href="{{ link('account/notifications') }}" class="button--link">{{ phrase('change') }}</xf:button>
+				</xf:formrow>
+
+				<hr class="formRowSep" />]]></template>
+  <template type="public" title="loginnotification_notifications" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<xf:title>{{ phrase('loginnotification_manage_login_notifications') }}</xf:title>
+
+<xf:wrap template="account_wrapper" />
+
+<xf:description>{{ phrase('loginnotification_desc') }}</xf:description>
+
+<div class="block">
+	<div class="block-container">
+		<div class="block-body">
+			<div class="block-row block-row--separated">
+				<div class="contentRow">
+					<div class="contentRow-main contentRow-main--close">
+						<div class="contentRow-extra">
+							<xf:if is="$xf.visitor.Option.loginnotification_notification">
+								<xf:form action="{{ link('account/notifications/disable') }}" ajax="true" class="block" data-force-flash-message="true">
+									<xf:button type="submit">{{ phrase('disable') }}</xf:button>
+								</xf:form>
+							<xf:else/>
+								<xf:form action="{{ link('account/notifications/enable') }}" ajax="true" class="block" data-force-flash-message="true">
+									<xf:button type="submit">{{ phrase('enable') }}</xf:button>
+								</xf:form>
+							</xf:if>
+						</div>
+						<h2 class="contentRow-title">{{ phrase('loginnotification_notification_title') }}</h2>
+						<div class="contentRow-minor">{{ phrase('loginnotification_notification_desc') }}</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>]]></template>
+</templates>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<phrases>
+  <phrase title="loginnotification_desc" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Notifications are sent upon a specific event on your account such as a logon using an unrecognized IP address. If your account is ever compromised using an unrecognized IP address, you will receive a notification notifying you of the login.]]></phrase>
+  <phrase title="loginnotification_login_from_new_ip" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[{board}: Login from New IP]]></phrase>
+  <phrase title="loginnotification_login_from_new_ip_email_html" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[<p>{username},</p>
+
+<p>We noticed a login to your account on {board} from a new IP address. If this was not you, we recommend that you change your password immediately.</p>
+
+<p>Details:</p>
+<ul>
+    <li>IP Address: {ip}</li>
+    <li>User Agent: {agent}</li>
+</ul>
+
+To change your password or update security notification settings, please visit our {security} page.]]></phrase>
+  <phrase title="loginnotification_manage_login_notifications" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Manage Login Notifications]]></phrase>
+  <phrase title="loginnotification_notification_desc" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Receive a notification each time your account is accessed by a new IP address.]]></phrase>
+  <phrase title="loginnotification_notification_title" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Login From New IP Address]]></phrase>
+  <phrase title="loginnotification_notifications" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Login Notifications]]></phrase>
+  <phrase title="loginnotification_notifications_disabled" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Disabled]]></phrase>
+  <phrase title="loginnotification_notifications_enabled" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[Enabled]]></phrase>
+</phrases>

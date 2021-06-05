@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "Login Notification",
+    "description": "Send a notification to your users upon a login from a new location.",
+    "version_id": 1000010,
+    "version_string": "1.0.0 Alpha",
+    "dev": "Jayson Fong",
+    "dev_url": "https://www.jaysonfong.org",
+    "faq_url": "https://github.com/Jayson-Fong/XF-LoginNotification/",
+    "support_url": "https://github.com/Jayson-Fong/XF-LoginNotification/issues",
+    "extra_urls": [],
+    "require": [],
+    "icon": "fa-lock"
+}
